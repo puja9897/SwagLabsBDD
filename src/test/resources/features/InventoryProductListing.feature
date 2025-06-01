@@ -3,7 +3,7 @@ Feature: User should be able to view the product list and product details.
 Background:
 Given User is in Swag labs website
 When User enters valid username and password
-And Click on Login Button
+
 
 Scenario: User be able to view all the products
 Then User should be navigated to inventory page

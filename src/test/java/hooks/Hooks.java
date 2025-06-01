@@ -17,14 +17,19 @@ public class Hooks {
 	public void launchSwagLabs() {
 
 		try {
+			if(driver==null) {
 			config = new ConfigDataProvider();
 			browser = new Browser();
+			 System.out.println("Browser selected: " + config.getBrowser());
+			 
 			driver = browser.openBrowser(config.getBrowser());
             System.out.println("Driver launched: " + driver); // Debug log
 
 			driver.get(config.getURL());
-		} catch (Exception e) {
+			System.out.println("Navigated to: " + config.getURL());
+		}} catch (Exception e) {
             System.out.println("Exception in launchSwagLabs: " + e.getMessage());
+            e.printStackTrace();
 		}
 	}
 	

@@ -13,16 +13,21 @@ import utility.ConfigDataProvider;
 
 public class InventoryProductListingSteps {
 
-	WebDriver driver=Hooks.driver;
-	LoginPage login=new LoginPage(driver);
-	ConfigDataProvider config=new ConfigDataProvider();
-	InventoryProductListing inventory=new InventoryProductListing(driver);
+	WebDriver driver;
+	LoginPage login;
+	ConfigDataProvider config;
+	InventoryProductListing inventory;
 	
 
-	
+	public InventoryProductListingSteps() {
+		this.driver = Hooks.driver; // driver initialized in @Before
+	}
+
 	@Given("User is in Swag labs website")
 	public void user_is_in_swag_labs_website() {
-		
+		login=new LoginPage(driver);
+		config=new ConfigDataProvider();
+		inventory=new InventoryProductListing(driver);
 	}
 
 	@When("User enters valid username and password")
