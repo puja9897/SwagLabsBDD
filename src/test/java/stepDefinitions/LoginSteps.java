@@ -18,7 +18,7 @@ public class LoginSteps {
 
 	@Given("User is in Swag Labs login page")
 	public void user_is_in_swag_labs_login_page() {
-		driver = Hooks.driver;
+		this.driver = Hooks.driver;
 	    if (driver == null) {
 	        throw new IllegalStateException("Driver is not initialized in Hook.");
 	    }
