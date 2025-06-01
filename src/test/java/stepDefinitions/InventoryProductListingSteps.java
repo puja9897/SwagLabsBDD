@@ -13,20 +13,21 @@ import utility.ConfigDataProvider;
 
 public class InventoryProductListingSteps {
 
-	WebDriver driver;
-	LoginPage login;
-	ConfigDataProvider config;
-	InventoryProductListing inventory;
+	WebDriver driver=Hooks.driver;
+	LoginPage login=new LoginPage(driver);
+	ConfigDataProvider config=new ConfigDataProvider();
+	InventoryProductListing inventory=new InventoryProductListing(driver);
+	
+
 	
 	@Given("User is in Swag labs website")
 	public void user_is_in_swag_labs_website() {
-		this.driver=Hooks.driver;
-		login=new LoginPage(driver);
+		
 	}
 
 	@When("User enters valid username and password")
 	public void user_enters_valid_username_and_password() {
-		config=new ConfigDataProvider();
+		
 		
 		login.enterLoginCredentials(config.getProperty("username"),config.getProperty("password"));
 		login.clickLoginBtn();
@@ -34,8 +35,8 @@ public class InventoryProductListingSteps {
 
 	@Then("User should be navigated to inventory page")
 	public void user_should_be_navigated_to_inventory_page() {
-		inventory=new InventoryProductListing(driver);
-		Assert.assertEquals(inventory.isLoginSuccessful(), "Login failed");
+		
+		Assert.assertTrue(inventory.isLoginSuccessful(), "Login failed");
 	}
 
 	@Then("All products should be displayed")
@@ -45,17 +46,17 @@ public class InventoryProductListingSteps {
 
 	@When("User clicks on product image")
 	public void user_clicks_on_product_image() {
-
+		inventory.clickOnProductImage(0);
 	}
 
 	@Then("Product details should be displayed")
 	public void product_details_should_be_displayed() {
-
+		Assert.assertTrue(inventory.isProductDisplayed(), "Product not displayed");
 	}
 
 	@When("User clicks on product title")
 	public void user_clicks_on_product_title() {
-
+		inventory.clickOnProductTitle(0);
 	}
 
 

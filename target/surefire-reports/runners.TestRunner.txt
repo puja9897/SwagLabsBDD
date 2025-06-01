@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: runners.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.259 s <<< FAILURE! -- in runners.TestRunner
+runners.TestRunner.runScenario["User be able to view all the products", "User should be able to view the product list and product details."](1) -- Time elapsed: 2.740 s <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pages.LoginPage.clickLoginBtn()" because "this.login" is null
+	at stepDefinitions.LoginSteps.click_on_login_button(LoginSteps.java:37)
+	at ✽.Click on Login Button(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/InventoryProductListing.feature:6)
+
+runners.TestRunner.runScenario["User should be able to open the product details by clicking image", "User should be able to view the product list and product details."](2) -- Time elapsed: 1.878 s <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pages.LoginPage.clickLoginBtn()" because "this.login" is null
+	at stepDefinitions.LoginSteps.click_on_login_button(LoginSteps.java:37)
+	at ✽.Click on Login Button(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/InventoryProductListing.feature:6)
+
+runners.TestRunner.runScenario["User should be able to view product details by clicking the product title", "User should be able to view the product list and product details."](3) -- Time elapsed: 1.853 s <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pages.LoginPage.clickLoginBtn()" because "this.login" is null
+	at stepDefinitions.LoginSteps.click_on_login_button(LoginSteps.java:37)
+	at ✽.Click on Login Button(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/InventoryProductListing.feature:6)
+
