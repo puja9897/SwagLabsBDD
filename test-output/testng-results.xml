@@ -1,59 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-02T12:40:53 IST" name="Suite" finished-at="2025-06-02T12:41:07 IST" duration-ms="14030">
+  <suite started-at="2025-06-02T14:03:42 IST" name="Failed suite [Default suite]" finished-at="2025-06-02T14:04:35 IST" duration-ms="52882">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7530ad9c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@33c911a1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-06-02T12:40:53 IST" name="Test" finished-at="2025-06-02T12:41:07 IST" duration-ms="14030">
+    <test started-at="2025-06-02T14:03:42 IST" name="Default test(failed)" finished-at="2025-06-02T14:04:35 IST" duration-ms="52882">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@7530ad9c]" started-at="2025-06-02T12:40:53 IST" name="setUpClass" finished-at="2025-06-02T12:40:53 IST" duration-ms="263" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@33c911a1]" started-at="2025-06-02T14:03:42 IST" name="setUpClass" finished-at="2025-06-02T14:03:42 IST" duration-ms="219" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2e73d5eb]]>
+                <![CDATA[org.testng.TestRunner@5d2828c9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7530ad9c]" started-at="2025-06-02T12:40:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T12:40:57 IST" duration-ms="4128" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@33c911a1]" started-at="2025-06-02T14:03:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T14:04:01 IST" duration-ms="18228" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User be able to view all the products"]]>
+                <![CDATA["User should be able to add the product"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User should be able to view the product list and product details."]]>
+                <![CDATA["User should be able to add and remove the products from the cart"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for text ('Remove') to be present in element [[ChromeDriver: chrome on windows (e8de6feae3e91f1474a3a8161c235a76)] -> css selector: button.btn_inventory] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54334}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54334/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e8de6feae3e91f1474a3a8161c235a76]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('Remove') to be present in element [[ChromeDriver: chrome on windows (e8de6feae3e91f1474a3a8161c235a76)] -> css selector: button.btn_inventory] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54334}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54334/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e8de6feae3e91f1474a3a8161c235a76
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.InventoryProductListing.addProduct(InventoryProductListing.java:40)
+at stepDefinitions.CartSteps.user_clicks_on_add_to_cart_for_a_product(CartSteps.java:36)
+at ✽.User clicks on add to cart for a product(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/Cart.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7530ad9c]" started-at="2025-06-02T12:40:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T12:40:59 IST" duration-ms="1928" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@33c911a1]" started-at="2025-06-02T14:04:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T14:04:18 IST" duration-ms="17178" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should be able to open the product details by clicking image"]]>
+                <![CDATA["User should be able to remove the product"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["User should be able to view the product list and product details."]]>
+                <![CDATA["User should be able to add and remove the products from the cart"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for text ('Remove') to be present in element [[ChromeDriver: chrome on windows (e0c6b88b4548312f4dc41320d83b0a03)] -> css selector: button.btn_inventory] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54376}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54376/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0c6b88b4548312f4dc41320d83b0a03]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('Remove') to be present in element [[ChromeDriver: chrome on windows (e0c6b88b4548312f4dc41320d83b0a03)] -> css selector: button.btn_inventory] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54376}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54376/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0c6b88b4548312f4dc41320d83b0a03
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.InventoryProductListing.addProduct(InventoryProductListing.java:40)
+at stepDefinitions.CartSteps.user_clicks_on_add_to_cart_for_a_product(CartSteps.java:36)
+at ✽.User clicks on add to cart for a product(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/Cart.feature:11)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@7530ad9c]" started-at="2025-06-02T12:40:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T12:41:07 IST" duration-ms="7644" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@33c911a1]" started-at="2025-06-02T14:04:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T14:04:35 IST" duration-ms="17201" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -66,28 +114,26 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=137.0.7151.56)
-Build info: version: '4.33.0', revision: '2c6aaad03a'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3fe8c917aec0504ac8086a63ac7ad3e2, findElement {using=class name, value=inventory_details_name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50279}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50279/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3fe8c917aec0504ac8086a63ac7ad3e2]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: inventory_details_name' (tried for 15 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: inventory_details_name' (tried for 15 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.InventoryProductListing.isProductDisplayed(InventoryProductListing.java:78)
+at stepDefinitions.InventoryProductListingSteps.product_details_should_be_displayed(InventoryProductListingSteps.java:59)
+at ✽.Product details should be displayed(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/InventoryProductListing.feature:18)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".inventory_details_name"}
   (Session info: chrome=137.0.7151.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.33.0', revision: '2c6aaad03a'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3fe8c917aec0504ac8086a63ac7ad3e2, findElement {using=class name, value=inventory_details_name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50279}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50279/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3fe8c917aec0504ac8086a63ac7ad3e2
+Command: [4d1f72b3213d275ac76ba0617c32ca62, findElement {using=class name, value=inventory_details_name}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d1f72b3213d275ac76ba0617c32ca62
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -109,20 +155,18 @@ at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedCo
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at pages.InventoryProductListing.isProductDisplayed(InventoryProductListing.java:70)
-at stepDefinitions.InventoryProductListingSteps.product_details_should_be_displayed(InventoryProductListingSteps.java:59)
-at ✽.Product details should be displayed(file:///C:/Users/pc/eclipse-workspace/SwagLabsBDD/src/test/resources/features/InventoryProductListing.feature:18)
+... 3 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@7530ad9c]" started-at="2025-06-02T12:41:07 IST" name="tearDownClass" finished-at="2025-06-02T12:41:07 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@33c911a1]" started-at="2025-06-02T14:04:35 IST" name="tearDownClass" finished-at="2025-06-02T14:04:35 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- runners.TestRunner -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test(failed) -->
+  </suite> <!-- Failed suite [Default suite] -->
 </testng-results>

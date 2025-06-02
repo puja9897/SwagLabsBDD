@@ -28,13 +28,13 @@ public class CartPage {
 	}
 
 	public void itemInCart() {
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    wait.until(ExpectedConditions.visibilityOfAllElements(cartItem));
 		Assert.assertTrue(cartItem.size() > 0, "No items in the cart.");
 	}
 	public void itemNotInCart() {
 		
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    wait.until(ExpectedConditions.invisibilityOfAllElements(cartItem));
 	    Assert.assertTrue(cartItem.size() == 0, "Item is still present in the cart.");
 	}

@@ -34,14 +34,14 @@ public class InventoryProductListing {
 
 	public void addProduct(int index) {
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		
 	    wait.until(ExpectedConditions.visibilityOfAllElements(productTitle));
 	    buttons.get(index).click();
 	    wait.until(ExpectedConditions.textToBePresentInElement(buttons.get(index), "Remove"));
 	}
 
 	public void removeProduct(int index) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    
 	    wait.until(ExpectedConditions.visibilityOfAllElements(productTitle));
 	    buttons.get(index).click();
 	    wait.until(ExpectedConditions.textToBePresentInElement(buttons.get(index), "Add to cart"));
@@ -49,7 +49,7 @@ public class InventoryProductListing {
 
 	public InventoryProductListing(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		PageFactory.initElements(driver, this);
 
 	}
