@@ -1,7 +1,9 @@
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\hooks\Hooks.java
+C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\pages\CartPage.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\pages\InventoryProductListing.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\pages\LoginPage.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\runners\TestRunner.java
+C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\stepDefinitions\CartSteps.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\stepDefinitions\InventoryProductListingSteps.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\stepDefinitions\LoginSteps.java
 C:\Users\pc\eclipse-workspace\SwagLabsBDD\src\test\java\utility\Browser.java

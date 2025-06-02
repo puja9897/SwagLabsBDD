@@ -1,8 +1,10 @@
 stepDefinitions\LoginSteps.class
 pages\LoginPage.class
-stepDefinitions\InventoryProductListingSteps.class
+pages\CartPage.class
 runners\TestRunner.class
 pages\InventoryProductListing.class
 utility\Browser.class
+stepDefinitions\CartSteps.class
+stepDefinitions\InventoryProductListingSteps.class
 hooks\Hooks.class
 utility\ConfigDataProvider.class
