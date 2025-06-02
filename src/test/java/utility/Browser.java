@@ -2,8 +2,10 @@ package utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -11,6 +13,8 @@ public class Browser {
 
     WebDriver driver;
 
+    @BeforeClass
+    @Parameters("browser")
     public WebDriver openBrowser(String browser) throws Exception {
         if(driver == null) {
             switch(browser.toLowerCase()) {

@@ -34,8 +34,9 @@ public class InventoryProductListing {
 
 	public void addProduct(int index) {
 		
-		
+			
 	    wait.until(ExpectedConditions.visibilityOfAllElements(productTitle));
+	    System.out.println("Attempting to click the button at index: " + index);//logging
 	    buttons.get(index).click();
 	    wait.until(ExpectedConditions.textToBePresentInElement(buttons.get(index), "Remove"));
 	}
@@ -49,7 +50,7 @@ public class InventoryProductListing {
 
 	public InventoryProductListing(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		PageFactory.initElements(driver, this);
 
 	}
