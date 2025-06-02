@@ -26,17 +26,25 @@ public class InventoryProductListing {
 	WebElement productDetailsTitle;
 	@FindBy(className = "inventory_item_name")
 	List<WebElement> productTitle;
-	@FindBy(css = ".btn.btn_primary.btn_small.btn_inventory")
-	private List<WebElement> AddtoCartBtn;
-	@FindBy(css = ".btn.btn_secondary.btn_small.btn_inventory ")
-	private List<WebElement> RemoveBtn;
+
+	@FindBy(css = "button.btn_inventory")
+	List<WebElement> buttons; // Add to cart and Remove share same class
+	@FindBy(className = "shopping_cart_link")
+	private WebElement cart;
 
 	public void addProduct(int index) {
-		AddtoCartBtn.get(index).click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    wait.until(ExpectedConditions.visibilityOfAllElements(productTitle));
+	    buttons.get(index).click();
+	    wait.until(ExpectedConditions.textToBePresentInElement(buttons.get(index), "Remove"));
 	}
 
 	public void removeProduct(int index) {
-		RemoveBtn.get(index).click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    wait.until(ExpectedConditions.visibilityOfAllElements(productTitle));
+	    buttons.get(index).click();
+	    wait.until(ExpectedConditions.textToBePresentInElement(buttons.get(index), "Add to cart"));
 	}
 
 	public InventoryProductListing(WebDriver driver) {
@@ -74,5 +82,9 @@ public class InventoryProductListing {
 
 	public void clickOnProductTitle(int index) {
 		productTitle.get(index).click();
+	}
+
+	public void clickOnCart() {
+		cart.click();
 	}
 }

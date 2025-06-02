@@ -38,18 +38,22 @@ public class CartSteps {
 
 	@Then("Product should be added to the cart")
 	public void product_should_be_added_to_the_cart() {
+		inventory.clickOnCart();
 		cart=new CartPage(driver);
 		cart.itemInCart();
 	}
 
 	@When("User clicks on remove for a product")
 	public void user_clicks_on_remove_for_a_product() {
-
+		
+		inventory.removeProduct(0);
 	}
 
 	@Then("Product should be remove from the cart")
 	public void product_should_be_remove_from_the_cart() {
-
+		inventory.clickOnCart();
+		cart = new CartPage(driver);
+		cart.itemNotInCart();
 	}
 
 }
